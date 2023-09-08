@@ -1,0 +1,18 @@
+button {
+  margin-bottom: 10px;
+  width: 200px
+}
+
+mat-card {
+  width: 410px;
+  margin: 10px
+}
+
+.error-msg {
+  color: #efefef;
+  background-color: rgb(190, 49, 49);
+  text-align: center;
+  padding: 10px;
+  border: 1px solid rgb(248, 105, 10);
+  border-radius: 5px;  
+}

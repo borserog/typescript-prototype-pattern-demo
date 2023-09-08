@@ -1,0 +1,13 @@
+p {
+  font-family: Lato;
+}
+
+.container {
+  background-color: #ddd;
+  height: 100%;
+}
+
+.contact-list {
+  padding: 20px;
+  background-color: #ddd;
+}

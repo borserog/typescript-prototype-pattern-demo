@@ -1,0 +1,12 @@
+<div fxLayout="row wrap" fxFlexJustify="center" class="container">
+  <ng-container *ngFor="let contact of contactsList; let i = index">
+  <app-contact-item
+    [contact]="contact"
+    [index]="i"
+    (itemDuplicated)="onItemDuplicated($event)"
+    (itemDeleted)="onItemDeleted($event)"
+    ></app-contact-item>
+</ng-container>
+</div>
+
+

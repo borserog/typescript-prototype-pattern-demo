@@ -1,0 +1,88 @@
+<mat-card>
+  <pre>
+  {{ contact | json }}
+</pre
+  >
+
+  <div fxLayout="row" fxLayoutAlign="space-around center">
+    <div fxLayout="column" fxLayoutAlign="space-around center">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input
+          matInput
+          type="text"
+          id="name"
+          [(ngModel)]="contact.name"
+          placeholder="Name"
+          name="name"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Phone</mat-label>
+        <input
+          matInput
+          type="text"
+          id="phone"
+          [(ngModel)]="contact.phone"
+          placeholder="Phone"
+          name="phone"
+        />
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>e-mail</mat-label>
+        <input
+          matInput
+          type="text"
+          id="e-mail"
+          [(ngModel)]="contact.socialMedia.email"
+          placeholder="e-mail"
+          name="e-mail"
+        />
+      </mat-form-field>
+    </div>
+
+    <div
+      class="button-dashboard"
+      fxLayout="column"
+      fxLayoutAlign="space-around center"
+    >
+      <button
+        mat-stroked-button
+        color="primary"
+        type="button"
+        (click)="naiveClone()"
+      >
+        Naive Clone
+      </button>
+      <button
+        mat-stroked-button
+        color="primary"
+        type="button"
+        (click)="cloneJSON()"
+      >
+        JSON Clone
+      </button>
+      <button
+        mat-stroked-button
+        color="primary"
+        type="button"
+        (click)="spreadClone()"
+      >
+        Spread Clone
+      </button>
+      <button
+        mat-raised-button
+        color="primary"
+        type="button"
+        (click)="trueClone()"
+      >
+        True Clone
+      </button>
+      <button mat-button color="warn" type="button" (click)="remove()">
+        Remove
+      </button>
+    </div>
+  </div>
+  <p class="error-msg" *ngIf="errorMsg">{{ errorMsg }}</p>
+</mat-card>
